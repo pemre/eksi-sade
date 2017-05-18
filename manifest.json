@@ -1,0 +1,19 @@
+{
+  "description": "Ekşi Sözlük simplified. Removes many parts, colourises topic links, brings a dark theme for the famous Turkish dictionary.",
+  "manifest_version": 2,
+  "name": "Eksi Sade",
+  "version": "1.0.0",
+  "developer": {
+    "name": "Emre Piskin",
+    "url": "https://github.com/pemre/eksi-sade"
+  },
+  "icons": {
+    "48": "icons/eksi-sade-48.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.eksisozluk.com/*"],
+      "js": ["jquery-3.2.1.min.js", "eksi-sade.js"]
+    }
+  ]
+}

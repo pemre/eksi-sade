@@ -35,6 +35,9 @@ a,
 #top-bar .eksico {
     fill: #53a245;
 }
+.topic-list li > a:hover {
+    background-color: #444 !important;
+}
 /* Wider topic list */
 #main {
     margin-left: 360px;

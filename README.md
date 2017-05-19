@@ -7,7 +7,7 @@ Ekşi Sözlük simplified. A Firefox addon for the famous Turkish social network
 * `Simple`: Removes many parts, scripts, including ads
 * `Troll detection`: Marks troll comments with a red background 
   * The troll list is mainly based on this [entry]
-* `Colored topics`: Colourises topic links and sorts them descending order
+* `Colored topics`: Colourises topic links and sorts them by descending order
 * `Bitter`: Brings a dark theme
 
 An ad blocker addon like uBlock Origin is also recommended for faster surfing.
@@ -34,6 +34,9 @@ Make the plugin better! Join the [contributors] today by submitting a patch! The
 [fork]: https://github.com/pemre/eksi-sade/fork
 
 ## Changelog
+* v1.1.1
+  * Android bug fix
+  * Minor CSS improvement
 * v1.1.0
   * Troll detection feature added
   * Performance improved using CSS file instead of jQuery

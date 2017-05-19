@@ -4,10 +4,18 @@
  * Sorts and colourises side menu links
  */
 function improveLinks() {
-    // Remove sponsored links
-    $('.topic-list li[id*=sponsored]').remove();
+    // On mobile, parent of the list changes and the default parent becomes hidden
+    var root;
+    if ($('#index-section').is(':visible'))
+        root = '#index-section ';               // default parent
+    else
+        root = '#mobile-index ';                // mobile parent
 
-    $('.topic-list a').each(function() {
+    // Remove sponsored links
+    $(root + '.topic-list li[id*=sponsored]').remove();
+
+    // Colourise links based on comment count
+    $(root + '.topic-list a').each(function() {
         var t = $(this);
 
         /*// Relative url fix
@@ -52,8 +60,8 @@ function improveLinks() {
         return nb > na ? 1 : -1;
     };
 
-    $('.topic-list li').sort(sortLi)    // sort elements
-        .appendTo('.topic-list');       // append again to the list
+    $(root + '.topic-list li').sort(sortLi)    // sort elements
+        .appendTo(root + '.topic-list');       // append again to the list
 }
 /**
  * Warns against troll accounts by giving a red background to their comments
@@ -229,7 +237,7 @@ function improveLinksAddEvent() {
   $('#partial-index').on('DOMNodeInserted', function(e) {
     // Check if the node contains the topic list
     if (e.target.classList.value === "topic-list partial") {
-      improveLinks();
+        improveLinks();
     }
   });
 }

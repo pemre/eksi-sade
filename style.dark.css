@@ -1,0 +1,57 @@
+/* Hide some parts before removing them */
+aside,
+#site-footer,
+.ads,
+iframe,
+script,
+noscript,
+.eksiseyler-logo {
+    display: none
+}
+/* general */
+body {
+    padding: 0;
+    background-color: #333;
+    color: #ddd;
+}
+body > header {
+    background-color: #333;
+}
+/* custom logo */
+#logo {
+    width: 50px;
+}
+#logo a {
+    background-image: url('icons/eksi-sade-48.png');
+    background-size: 40px 40px;
+}
+/* Link colors */
+a,
+.topic-list li > a,
+#sub-navigation > ul > li > a,
+#top-navigation > ul > li > a {
+    color: #53a245;
+}
+#top-bar .eksico {
+    fill: #53a245;
+}
+/* Wider topic list */
+#main {
+    margin-left: 360px;
+}
+#index-section {
+    top: 0;
+    width: 360px;
+}
+@media handheld, only screen and (max-width: 850px) {
+    #main {
+        margin: 0;
+    }
+}
+/* Smaller topic links */
+.topic-list > li > a {
+    padding: 3px 0 !important;
+}
+.topic-list > li > a > small {
+    top: 3px !important;
+}

@@ -34,6 +34,8 @@ Make the plugin better! Join the [contributors] today by submitting a patch! The
 [fork]: https://github.com/pemre/eksi-sade/fork
 
 ## Changelog
+* v1.1.2
+  * Dark theme fix for Eksi custom themes
 * v1.1.1
   * Android bug fix
   * Minor CSS improvement

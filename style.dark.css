@@ -15,28 +15,38 @@ body {
     color: #ddd;
 }
 body > header {
-    background-color: #333;
+    background-color: #333 !important;
+    border-bottom: 1px solid #aaa !important;
 }
 /* custom logo */
 #logo {
     width: 50px;
 }
 #logo a {
-    background-image: url('icons/eksi-sade-48.png');
+    background-image: url('icons/eksi-sade-48.png') !important;
     background-size: 40px 40px;
 }
 /* Link colors */
 a,
 .topic-list li > a,
 #sub-navigation > ul > li > a,
-#top-navigation > ul > li > a {
+#top-navigation > ul > li > a,
+.theme-enabled #top-navigation > ul > li > a {
     color: #53a245;
 }
-#top-bar .eksico {
-    fill: #53a245;
+#top-bar .eksico,
+.sub-title-menu .eksico,
+#entry-list footer .eksico {
+    fill: #53a245 !important;
 }
 .topic-list li > a:hover {
     background-color: #444 !important;
+}
+.pager > a {
+    border: 1px solid #53a245 !important;
+}
+.pager select {
+    border-color: #53a245 !important;
 }
 /* Wider topic list */
 #main {
@@ -49,6 +59,9 @@ a,
 @media handheld, only screen and (max-width: 850px) {
     #main {
         margin: 0;
+    }
+    #top-bar {
+        border-bottom: none !important;
     }
 }
 /* Smaller topic links */

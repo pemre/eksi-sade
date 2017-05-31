@@ -1,5 +1,18 @@
 'use strict';
 
+/**************** HELPER FUNCTIONS ****************/
+
+/**
+ * Removes given nodes
+ */
+function removeNodes(nodes) {
+  Array.prototype.forEach.call(nodes, function(node) {
+    node.parentNode.removeChild(node);
+  });
+}
+
+/**************** MAIN FUNCTIONS ****************/
+
 /**
  * Sorts and colourises side menu links
  */
@@ -11,8 +24,10 @@ function improveLinks() {
     else
         root = '#mobile-index ';                // mobile parent
 
+    // Select sponsored links
+    var nodes = document.querySelectorAll(root + '.topic-list li[id*=sponsored]');
     // Remove sponsored links
-    $(root + '.topic-list li[id*=sponsored]').remove();
+    removeNodes(nodes);
 
     // Colourise links based on comment count
     $(root + '.topic-list a').each(function() {
@@ -63,6 +78,21 @@ function improveLinks() {
     $(root + '.topic-list li').sort(sortLi)    // sort elements
         .appendTo(root + '.topic-list');       // append again to the list
 }
+
+/**
+ * Creates an event to improve links on every top menu click (Ajax call)
+ */
+function improveLinksAddEvent() {
+  // Define the event listener
+  var OnNodeInserted = function(e) {
+    // Check if the node contains the topic list
+    if (e.target.classList.value === "topic-list partial")
+      improveLinks();
+  }
+  // Add the event listener
+  document.getElementById("partial-index").addEventListener('DOMNodeInserted', OnNodeInserted, false);
+}
+
 /**
  * Warns against troll accounts by giving a red background to their comments
  */
@@ -230,17 +260,7 @@ function trollWarning() {
         }
     });
 }
-/**
- * Creates an event to improve links on every top menu click (Ajax call)
- */
-function improveLinksAddEvent() {
-  $('#partial-index').on('DOMNodeInserted', function(e) {
-    // Check if the node contains the topic list
-    if (e.target.classList.value === "topic-list partial") {
-        improveLinks();
-    }
-  });
-}
+
 /**
  * Removes unnecessary parts. CSS hiding is not enough! :)
  */
@@ -253,10 +273,14 @@ function removeParts() {
     'iframe',
     'script',
     'noscript',
-    '.eksiseyler-logo'
+    '.eksiseyler-logo',
+    '[href$="adtitles"]'
   ];
+  // Select them
+  var nodes = document.querySelectorAll(removeList.join(","));
   // Remove them
-  $(removeList.join(",")).remove();
+  removeNodes(nodes);
+  // TODO: Change jQuery functions to pure JS
   // Remove next siblings of the container
   $('#container').nextAll().remove();
   //removeSelectorSiblings("#container");

@@ -28,10 +28,12 @@ body > header {
 }
 /* Link colors */
 a,
+#entry-list a,
 .topic-list li > a,
 #sub-navigation > ul > li > a,
 #top-navigation > ul > li > a,
-.theme-enabled #top-navigation > ul > li > a {
+.theme-enabled #top-navigation > ul > li > a,
+.tabs > li.active > a {
     color: #53a245;
 }
 #top-bar .eksico,

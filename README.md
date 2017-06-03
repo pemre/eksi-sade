@@ -34,6 +34,8 @@ Make the plugin better! Join the [contributors] today by submitting a patch! The
 [fork]: https://github.com/pemre/eksi-sade/fork
 
 ## Changelog
+* v1.1.4
+  * Performance: jQuery removed completely, the extension is pure JS
 * v1.1.3
   * CSS fix for custom link colors
   * Removed advertisement tabs

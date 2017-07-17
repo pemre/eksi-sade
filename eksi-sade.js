@@ -290,7 +290,29 @@ function trollWarning() {
         'rke',
         'asilcanarkadasbenim',
         'behlul olarak giris yapmak istiyorum',
-        'omeremre42'
+        'omeremre42',
+        'abdal karga',
+        'alchemisto',
+        'bynpass',
+        'diyorum',
+        'elinherifi',
+        'fenahuyluspazo',
+        'hebirisi',
+        'hulyodelivaldez',
+        'imsorry',
+        'ittin bittin',
+        'jariomardel',
+        'karacakurt',
+        'kubito',
+        'mesinieskimiskeneftakunyasi',
+        'pilye',
+        'postfuturistic oomph girl',
+        'risksever',
+        'seraneva',
+        'seymayaziyor',
+        'sinefili',
+        'uzak yolculuk',
+        'wolkeno'
     ];
     // Select all entries which have 'data-author' attribute
     var nodes = document.querySelectorAll('li[data-author]');

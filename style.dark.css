@@ -12,19 +12,22 @@ noscript,
 body {
     padding: 0;
     background-color: #333;
-    color: #ddd;
+    color: #ddd
 }
 body > header {
     background-color: #333 !important;
-    border-bottom: 1px solid #aaa !important;
+    border-bottom: 1px solid #aaa !important
+}
+h2 {
+    color: #aaa !important
 }
 /* custom logo */
 #logo {
-    width: 50px;
+    width: 50px
 }
 #logo a {
     background-image: url('icons/eksi-sade-48.png') !important;
-    background-size: 40px 40px;
+    background-size: 40px 40px
 }
 /* Link colors */
 a,
@@ -34,42 +37,46 @@ a,
 #top-navigation > ul > li > a,
 .theme-enabled #top-navigation > ul > li > a,
 .tabs > li.active > a {
-    color: #53a245;
+    color: #53a245
 }
 #top-bar .eksico,
 .sub-title-menu .eksico,
 #entry-list footer .eksico {
-    fill: #53a245 !important;
+    fill: #53a245 !important
 }
 .topic-list li > a:hover {
-    background-color: #444 !important;
+    background-color: #444 !important
 }
 .pager > a {
-    border: 1px solid #53a245 !important;
+    border: 1px solid #53a245 !important
 }
 .pager select {
-    border-color: #53a245 !important;
+    border-color: #53a245 !important
+}
+.entry-date {
+    color: #aaa !important
 }
 /* Wider topic list */
 #main {
-    margin-left: 360px;
+    margin-left: 360px
 }
 #index-section {
     top: 0;
-    width: 360px;
+    width: 360px
 }
 @media handheld, only screen and (max-width: 850px) {
     #main {
-        margin: 0;
+        margin: 0
     }
     #top-bar {
-        border-bottom: none !important;
+        border-bottom: none !important
     }
 }
 /* Smaller topic links */
 .topic-list > li > a {
-    padding: 3px 0 !important;
+    padding: 3px 0 !important
 }
 .topic-list > li > a > small {
     top: 3px !important;
+    color: #888888 !important
 }

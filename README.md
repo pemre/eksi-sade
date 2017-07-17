@@ -36,6 +36,7 @@ Make the plugin better! Join the [contributors] today by submitting a patch! The
 ## Changelog
 * v1.1.5
   * Troll list updated (+22)
+  * CSS fix for custom header/link colors
 * v1.1.4
   * Performance: jQuery removed completely, the extension is pure JS
 * v1.1.3

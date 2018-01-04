@@ -189,7 +189,7 @@ function trollWarning() {
         'medellin',
         'liberteryen',
         // from other users
-        'yapcak-bisi-yok',
+        'yapcak bisi yok',
         'fikirmuhendisifikri',
         // https://eksisozluk.com/entry/64141929
         'boldpilot',

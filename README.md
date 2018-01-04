@@ -34,6 +34,9 @@ Make the plugin better! Join the [contributors] today by submitting a patch! The
 [fork]: https://github.com/pemre/eksi-sade/fork
 
 ## Changelog
+* v1.1.6
+  * Troll list updated (+19)
+  * Fix: One troll name
 * v1.1.5
   * Troll list updated (+22)
   * CSS fix for custom header/link colors
